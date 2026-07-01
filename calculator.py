@@ -1,21 +1,24 @@
-a = float(input("Enter a first number:"))
-operator = input("Enter a operator(+,-,/,*,%):")
-b = float(input("enter a second number:"))
+a = float(input("Enter the first number: "))
+operator = input("choose an operator(+, -, /, *, %): ")
+b = float(input("Enter the second number: "))
 
 if operator == "+":
-    result = a+b
+    result = a + b
 elif operator == "-":
-    result = a-b
+    result = a - b
 elif operator == "*":
-    result = a*b
+    result = a * b
 elif operator == "%":
-    result = a%b
+    if b != 0:
+        result = a % b
+    else:
+        result = "Cannot take modulo by zero"
 elif operator == "/":
     if b != 0 :
-        result == a/b
+        result = a / b
     else:
        result = "cannot divide by zero"
 else :
-    result = "inavalid operator"
+    result = "Invalid operator"
 
 print("Result:",result)
